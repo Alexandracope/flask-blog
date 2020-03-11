@@ -17,7 +17,7 @@
                 {% endif %}
             </div>
             <br>
-            <!--Password and Check Password fields-->
+            
             <br>
              
     {{ form.hidden_tag() }}
@@ -31,25 +31,10 @@
                 {% endfor %}
             </div>
         {% endif %}
-    
-        {{ form.hidden_tag() }}
-            <div class='form_group'>
-                {{ form.confirm_password.label }}
-                {{ form.confirm_password }}
-                {% if form.confirm_password.errors %}
-                    <div class='error'>
-                        {% for error in form.confirm_password.errors %}
-                            <span>{{ error }}</span>
-                        {% endfor %}
-                    </div>
-                {% endif %}
-                </div>
-                <div class='form_group'>
-                    {{ form.submit }}
-                </div>
-            </form>
-        </div> 
-    
 
-    
-{% endblock %}
+    {{ form.remember.label }}
+    {{ form.remember }}
+
+    {{ form.submit }}
+
+ {% endblock %}
